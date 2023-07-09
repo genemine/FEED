@@ -13,3 +13,7 @@ A gene expression matrix is used as input, where rows represent genes and column
 `genes <- FEED(dataset)`
 
 The genes selected by FEED can be used to update gene expression matrix and cluster cells.
+
+# 4. Contact
+
+If any questions, please do not hesitate to contact us at: hongdong@csu.edu.cn
