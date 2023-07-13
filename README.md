@@ -13,12 +13,15 @@ First, FEED decomposes the distribution that expression of each gene follows int
 Second, genes are grouped into bins based on their average expression. The subsequent analysis is performed within each bin. Jensen-Shannon divergence is applied to calculate correlations between genes.
 Finally, based on the gene correlation matrix, coefficient of variation (CVs) are calculated as gene importance. A permutation-based threshold calculation method is used to determine a cutoff of gene importance and thus identify marker genes.
 
-# 2. Usage
+# 2. Implementation
+FEED is implemented in R. It is tested on  Linux operating system. They are freely available for non-commercial use.
+
+# 3. Usage
 
 `genes <- FEED(dataset)`
 
 The genes selected by FEED can be used to update gene expression matrix and cluster cells.The demo input data are provided in the folder 'dataset'.
 
-# 3. Contact
+# 4. Contact
 
 If any questions, please do not hesitate to contact us at: hongdong@csu.edu.cn
