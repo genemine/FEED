@@ -20,7 +20,7 @@ FEED is implemented in R. It is tested on  Linux operating system. They are free
 
 `genes <- FEED(dataset)`
 
-The genes selected by FEED can be used to update gene expression matrix and cluster cells.The demo input data are provided in the folder 'dataset'.
+The genes selected by FEED can be used to update gene expression matrix and cluster cells.The demo input data are provided in the folder 'dataset'.We also provide a test code for you to use, you just need to run `Rscript "./test.R"`
 
 # 4. Contact
 
