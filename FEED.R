@@ -551,9 +551,9 @@ cal_score <- function(JS_init) {
 
 #' @param data_set gene expression matrix
 #' @return JS initial correlation matrix
-FEED_first <- function(data_set) {
+FEED_first <- function(data_set,num) {
   message("Running bin genes...")
-  gene_bins <- bin_gene(data_set = data_set, num = 20)
+  gene_bins <- bin_gene(data_set = data_set, num )
   message("Done!")
   
   message("Calculate MU and SIGMA...")
@@ -601,7 +601,7 @@ FEED_first <- function(data_set) {
 #' main function
 #' @param data_set raw gene expression matrix
 #' @return final gene subset
-FEED <- function(data_set) {
+FEED <- function(data_set, num = 20) {
   message("Running data preprocessing...")
   data_set <- rnaseq_processing(data_set)
   message("Done!")
@@ -640,7 +640,7 @@ FEED <- function(data_set) {
     )
   ) %dopar% {
     try({
-      FEED_first(all_data[[t]])
+      FEED_first(all_data[[t]],num)
     })
   }
   parallel::stopCluster(cl)
